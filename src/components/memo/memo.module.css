@@ -1,0 +1,11 @@
+.memoContainer {
+  margin-bottom: 30px;
+  background-color: white;
+  color: black;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
