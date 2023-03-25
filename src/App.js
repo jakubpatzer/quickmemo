@@ -1,9 +1,10 @@
-import "./App.css";
+import "./global.css";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import Memo from "./components/memo/Memo";
 import { useStickyState } from "./utils";
 import Modal from "./components/modal/Modal";
+import MainLayout from "./layouts/MainLayout";
 
 function App() {
   const [text, setText] = useState("");
@@ -45,34 +46,38 @@ function App() {
 
   return (
     <div className="App">
-      <div className="input-conatiner">
-        <input
-          type="text"
-          placeholder="Write memo..."
-          className="memo-input"
-          onChange={(e) => setText(e.currentTarget.value)}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              handleAddMemo(e);
-            }
-          }}
-        />
-        <button className="end-day-button" onClick={handleTriggerModal}>End day</button>
-      </div>
-      {modalVisible && (
-        <Modal
-          memos={memos}
-          dayConfirmed={dayConfirmed}
-          handleTriggerModal={handleTriggerModal}
-          handleConfirm={handleConfirm}
-          handleReset={handleReset}
-        />
-      )}
-      <div>
-        {memos.map((memo) => (
-          <Memo key={memo.id} {...memo} handleSelect={handleSelect} />
-        ))}
-      </div>
+      <MainLayout>
+        <div className="input-conatiner">
+          <input
+            type="text"
+            placeholder="Write memo..."
+            className="memo-input"
+            onChange={(e) => setText(e.currentTarget.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                handleAddMemo(e);
+              }
+            }}
+          />
+          <button className="end-day-button" onClick={handleTriggerModal}>
+            End day
+          </button>
+        </div>
+        {modalVisible && (
+          <Modal
+            memos={memos}
+            dayConfirmed={dayConfirmed}
+            handleTriggerModal={handleTriggerModal}
+            handleConfirm={handleConfirm}
+            handleReset={handleReset}
+          />
+        )}
+        <div>
+          {memos.map((memo) => (
+            <Memo key={memo.id} {...memo} handleSelect={handleSelect} />
+          ))}
+        </div>
+      </MainLayout>
     </div>
   );
 }
