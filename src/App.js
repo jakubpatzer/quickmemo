@@ -20,6 +20,10 @@ function App() {
     setMemos([...memos, newMemo]);
     e.currentTarget.value = "";
   };
+  const handleDeleteMemo = (id) => {
+    let filteredMemos = memos.filter((memo) => memo.id !== id);
+    setMemos(filteredMemos);
+  };
   const handleSelect = (id) => {
     const newMemos = memos.map((memo) => {
       if (memo.id === id) {
@@ -78,7 +82,12 @@ function App() {
         )}
         <div>
           {memos.map((memo) => (
-            <Memo key={memo.id} {...memo} handleSelect={handleSelect} />
+            <Memo
+              key={memo.id}
+              {...memo}
+              handleSelect={handleSelect}
+              handleDeleteMemo={handleDeleteMemo}
+            />
           ))}
         </div>
       </MainLayout>

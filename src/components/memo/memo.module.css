@@ -2,14 +2,24 @@
   margin-bottom: 30px;
   background-color: white;
   color: black;
-  padding: 10px 10px;
+  padding: 20px 30px;
   border-radius: 5px;
   line-break: anywhere;
   text-align: center;
+  position: relative;
 }
 
 .completed {
   text-decoration: line-through;
   text-decoration-color: red;
   text-decoration-thickness: 2px;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: red;
+  background-color: white;
+  border-radius: 5px;
 }
