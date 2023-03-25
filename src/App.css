@@ -35,15 +35,15 @@
 }
 
 .input-conatiner {
-  margin: 50px 0;
+  margin: 100px 0 50px;
 }
 
 .memo-input {
-  height: 30px;
+  height: 40px;
   border-radius: 5px;
   margin-right: 20px;
 }
 
 .end-day-button {
-  padding: 7px 5px;
+  padding: 12px 5px;
 }

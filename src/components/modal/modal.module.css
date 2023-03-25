@@ -13,7 +13,7 @@
   border-radius: 5px;
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  padding: 20px 20px 40px;
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
 }
@@ -28,6 +28,7 @@
 .modalText {
   color: black;
   margin-bottom: 30px;
+  font-size: 1.5rem;
 }
 
 .modalButton {
@@ -35,6 +36,7 @@
   color: white;
   padding: 8px 8px;
   border-radius: 5px;
-  width: 100px;
+  width: 110px;
   margin: 0 10px;
+  font-size: 1rem;
 }
