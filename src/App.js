@@ -55,7 +55,11 @@ function App() {
             onChange={(e) => setText(e.currentTarget.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
-                handleAddMemo(e);
+                if (e.currentTarget.value.replace(/\s/g, "") !== "") {
+                  handleAddMemo(e);
+                } else {
+                  e.currentTarget.value = "";
+                }
               }
             }}
           />
