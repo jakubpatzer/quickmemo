@@ -1,10 +1,18 @@
-.App {
+.app {
   font-size: calc(10px + 2vmin);
   background-color: #282c34;
 }
+
+.app-heading {
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
 .input-conatiner {
-  margin: 100px 0 50px;
+  padding: 60px 0 40px;
+  margin-bottom: 40px;
   display: flex;
+  border-bottom: solid 1px gray;
 }
 
 .memo-input {
@@ -19,4 +27,10 @@
   flex: 1;
   border-radius: 8px;
   border: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .app-heading {
+    font-size: 2rem;
+  }
 }

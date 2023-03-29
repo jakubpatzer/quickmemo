@@ -9,13 +9,13 @@ const Modal = ({
   handleReset,
 }) => {
   const completedMemos = memos.filter((memo) => memo.completed).length;
-  let res = Math.round((completedMemos / memos.length) * 100);
+  const result = Math.round((completedMemos / memos.length) * 100);
   const showResults = () => {
-    if (res === 0) return "Naughty...";
-    if (res > 0 && res < 50) return "Bad...";
-    if (res >= 50 && res < 75) return "Good, but could be better :)";
-    if (res >= 75 && res < 100) return "Nearly perfect :)";
-    if (res === 100) return "Perfect <3";
+    if (result === 0) return "Naughty...";
+    if (result > 0 && result < 50) return "Bad...";
+    if (result >= 50 && result < 75) return "Good, but could be better :)";
+    if (result >= 75 && result < 100) return "Nearly perfect :)";
+    if (result === 100) return "Perfect <3";
   };
   return (
     <div className={style.modal}>

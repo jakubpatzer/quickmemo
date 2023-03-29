@@ -49,8 +49,9 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <MainLayout>
+        <h1 className="app-heading">QUICKMEMO</h1>
         <div className="input-conatiner">
           <input
             type="text"
